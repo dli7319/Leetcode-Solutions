@@ -7,7 +7,7 @@ class Solution {
         for (i in cdf.size - 2 downTo 0) {
             cdf[i] += cdf[i+1]
         }
-        var newString = StringBuffer()
+        var newString = StringBuilder(S.length)
         for (i in 0 until S.length) {
             newString.append('a' + (S.get(i) - 'a' + cdf[i]).rem(26))
         }
